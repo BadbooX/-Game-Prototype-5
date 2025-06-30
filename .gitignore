@@ -1,0 +1,30 @@
+# Dossiers générés par Unity à ne PAS versionner
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+Assets/AssetStoreTools*
+
+# Fichiers IDE (Visual Studio, Rider, etc.)
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+.vscode/
+.idea/
+
+# Fichiers du système
+.DS_Store
+Thumbs.db
+
+# Unity Cloud
+.cloud/
