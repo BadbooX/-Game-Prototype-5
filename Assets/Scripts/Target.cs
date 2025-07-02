@@ -10,10 +10,15 @@ public class Target : MonoBehaviour
     private float maxTorque = 4;
     private float xRange = 4;
     private float ySpawnPos = -2;
+
+    private GameManager gameManager;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         targetRb = GetComponent<Rigidbody>();
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+
         // Speed of the target
         targetRb.AddForce(RandomSpeed(), ForceMode.Impulse);
         // Torque in various axis X            Y               Z
@@ -32,6 +37,7 @@ public class Target : MonoBehaviour
     private void OnMouseDown()
     {
         Destroy(gameObject);
+        gameManager.UpdateScore(5);
     }
     private void OnTriggerEnter(Collider other)
     {

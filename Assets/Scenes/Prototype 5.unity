@@ -611,6 +611,7 @@ MonoBehaviour:
   - {fileID: 7389659886356746073, guid: 3588f7ab209d157919103dcb507f910e, type: 3}
   - {fileID: 349786900350346482, guid: 2395e3e836ebb414a97a3ecbe5075f49, type: 3}
   - {fileID: 6273738566497517726, guid: 57b19fbb32881a79d867d02b2a90ee29, type: 3}
+  scoreText: {fileID: 2114860115}
 --- !u!4 &1531673041
 Transform:
   m_ObjectHideFlags: 0
@@ -956,7 +957,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 205, y: -60}
+  m_AnchoredPosition: {x: 135.1, y: -60}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2114860115
@@ -1044,7 +1045,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -84.29364, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
