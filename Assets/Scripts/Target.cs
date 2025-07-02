@@ -13,6 +13,8 @@ public class Target : MonoBehaviour
 
     private GameManager gameManager;
 
+    public int pointValue;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -37,7 +39,7 @@ public class Target : MonoBehaviour
     private void OnMouseDown()
     {
         Destroy(gameObject);
-        gameManager.UpdateScore(5);
+        gameManager.UpdateScore(pointValue);
     }
     private void OnTriggerEnter(Collider other)
     {
