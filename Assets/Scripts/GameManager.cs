@@ -14,13 +14,16 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI gameOverText;
 
     private int score;
+    public bool isGameActive;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     { // Lance la coroutine
-        StartCoroutine(SpawnTarget());
+        isGameActive = true;
         score = 0;
 
+        StartCoroutine(SpawnTarget());
+        UpdateScore(0);
     }
 
     // Update is called once per frame
@@ -35,12 +38,13 @@ public class GameManager : MonoBehaviour
     }
     public void GameOver()
     {
+        isGameActive = false;
         gameOverText.gameObject.SetActive(true);
     }
     IEnumerator SpawnTarget()
     {
         // Attends spawnRate seconde 
-        while (true)
+        while (isGameActive)
         {
             yield return new WaitForSeconds(spawnRate);
             // CHoisit un index aléatoire entre 0 et le nombre max de préfab dans la list
