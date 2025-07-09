@@ -47,11 +47,12 @@ public class Target : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
         if (!gameObject.CompareTag("Bad"))
         {
+            Debug.Log("Game Over déclenché !");
             gameManager.GameOver();
         }
+        Destroy(gameObject);
     }
     Vector3 RandomSpeed()
     {
