@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     private float spawnRate = 1.0f;
 
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI gameOverText;
 
     private int score;
 
@@ -19,7 +20,7 @@ public class GameManager : MonoBehaviour
     { // Lance la coroutine
         StartCoroutine(SpawnTarget());
         score = 0;
-        
+
     }
 
     // Update is called once per frame
@@ -31,6 +32,10 @@ public class GameManager : MonoBehaviour
     {
         score += scoreToAdd;
         scoreText.text = "Score : " + score;
+    }
+    public void GameOver()
+    {
+        gameOverText.gameObject.SetActive(true);
     }
     IEnumerator SpawnTarget()
     {
